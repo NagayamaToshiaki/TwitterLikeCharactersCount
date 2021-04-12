@@ -1,0 +1,2 @@
+# TwitterLikeCharactersCount
+Twitterの文字数カウントをASP.NET MVCとバニラJavaScriptで再現しました。
