@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "入力結果";
+}
+
+<h2>入力結果</h2>
+
+<p>先ほど入力した文章はこちらです。</p>
+
+<blockquote>@ViewBag.Message</blockquote>
+
+@Html.ActionLink("元に戻る", nameof(TwitterLikeCharactersCount.Controllers.HomeController.Input))

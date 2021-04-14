@@ -1,0 +1,19 @@
+﻿@model TwitterLikeCharactersCount.Models.CharacterCountModel
+
+@{
+    ViewBag.Title = "文字入力";
+}
+
+@section Scripts {
+    <script src="@(BundleTable.Bundles.ResolveBundleUrl("~/bundles/countInput"))" defer></script>
+}
+
+<h2>文字入力</h2>
+
+<p>こちらに文字列を入力してください。</p>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.TwitterLikeInputFor(m => m.InputToCount, 280, new Dictionary<string, object>() { { "class", "border border-primary px-3 py-2" } }, new Dictionary<string, object>() { { "class", "border border-secondary pb-2" } }, new Dictionary<string, object>() { { "class", "text-danger" } }, new Dictionary<string, object>() { { "class", "text-danger" } });
+    <button type="submit">送信</button>
+}

@@ -1,0 +1,55 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* パディングを入れないとキャレットの位置が分からなくなることがある。*/
+.editor {
+    padding: 0.5em;
+}
+
+/* 以下、Bootstrap4以降から採用されたクラスの再現。BS4が入っている場合、以下はコメントアウトもしくは削除してください。 */
+.border {
+    border: 1px solid #dee2e6!important;
+}
+
+.border-primary {
+    border-color: #007bff!important;
+}
+
+.border-secondary {
+    border-color: #6c757d!important;
+}
+
+.px-3 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
