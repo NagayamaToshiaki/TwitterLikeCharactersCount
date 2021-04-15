@@ -27,6 +27,11 @@ namespace TwitterLikeCharactersCount.Helpers
         /// <returns></returns>
         public static IHtmlString TwitterLikeInputFor<TModel, TProperty>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProperty>> expression, int maxLength = 280, Dictionary<string, object> wrapperHtmlAttributes = null, Dictionary<string, object> editorHtmlAttributes = null, Dictionary<string, object> validationHtmlAttributes = null, Dictionary<string, object> excessiveStringAttributes = null)
         {
+            wrapperHtmlAttributes = wrapperHtmlAttributes ?? new Dictionary<string, object>();
+            editorHtmlAttributes = editorHtmlAttributes ?? new Dictionary<string, object>();
+            validationHtmlAttributes = validationHtmlAttributes ?? new Dictionary<string, object>();
+            excessiveStringAttributes = excessiveStringAttributes ?? new Dictionary<string, object>();
+
             var propertyId = helper.IdFor(expression);
 
             var length = maxLength / 2;
