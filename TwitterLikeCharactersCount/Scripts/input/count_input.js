@@ -61,7 +61,6 @@ const onSubmit = (e) => {
 const countInput = (target) => {
     const counterId = target.id.substring(0, target.id.indexOf("_editor")) + "_counter";
     const counter = document.getElementById(counterId);
-    const cjk = /[\p{Script=Katakana}\p{Script=Hiragana}\p{Script=Han}\p{Script=Hangul}\u{3000}-\u{303F}\u{FE30}-\u{FE4F}]/gu;
     const split = splitStrings(target.innerText);
     let length = 0;
     for (const str of split) {
