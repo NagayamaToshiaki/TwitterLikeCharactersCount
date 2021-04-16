@@ -43,7 +43,7 @@ namespace TwitterLikeCharactersCount.Helpers
             var hidden = helper.HiddenFor(expression);
 
             editorHtmlAttributes["id"] = $"{propertyId}_editor";
-            editorHtmlAttributes["class"] = $"{editorHtmlAttributes["class"].ToString()} editor";
+            editorHtmlAttributes["class"] = $"{(editorHtmlAttributes.ContainsKey("class") ? $"{editorHtmlAttributes["class"]?.ToString()} " : "")}editor";
             editorHtmlAttributes["contenteditable"] = "true";
             editorHtmlAttributes["data-max-length"] = maxLength;
             var editor = GenerateElement(htmlAttributes: editorHtmlAttributes);
