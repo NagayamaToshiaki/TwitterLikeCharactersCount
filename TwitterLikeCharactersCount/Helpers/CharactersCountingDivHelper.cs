@@ -20,6 +20,7 @@ namespace TwitterLikeCharactersCount.Helpers
         /// <typeparam name="TProperty">プロパティの型。</typeparam>
         /// <param name="helper">ヘルパー。</param>
         /// <param name="expression">プロパティを表す式。</param>
+        /// <param name="maxLength">入力欄の最大文字数。半角基準で入力してください。</param>
         /// <param name="wrapperHtmlAttributes">ラッパーのHTMLプロパティ。idは指定しても無視されます。</param>
         /// <param name="editorHtmlAttributes">編集箇所のHTMLプロパティ。id、controleditableは指定しても無視されます。</param>
         /// <param name="validationHtmlAttributes">編集箇所のHTMLプロパティ。</param>
