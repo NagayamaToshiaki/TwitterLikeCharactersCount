@@ -230,11 +230,14 @@ const removeExceededValidation = (key) => {
 }
 
 const editors = document.getElementsByClassName("editor");
-for(const editor of editors) {
+const forms = new Set();
+for (const editor of editors) {
     editor.addEventListener("input", onInput);
     editor.addEventListener("compositionend", onCompositionEnd);
     editor.addEventListener("paste", cleanPaste);
+    forms.add(editor.closest("form"));
 }
 
-const form = document.getElementById("form");
-form.addEventListener("submit", onSubmit);
+for (const form of forms) {
+    form.addEventListener("submit", onSubmit);
+}
