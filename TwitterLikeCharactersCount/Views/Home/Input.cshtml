@@ -14,6 +14,6 @@
 @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form" }))
 {
     @Html.AntiForgeryToken()
-    @Html.TwitterLikeInputFor(m => m.InputToCount, 280, new Dictionary<string, object>() { { "class", "border border-primary px-3 py-2" } }, new Dictionary<string, object>() { { "class", "border border-secondary pb-2" } }, new Dictionary<string, object>() { { "class", "text-danger" } }, new Dictionary<string, object>() { { "class", "text-danger" } });
+    @Html.TwitterLikeInputFor(m => m.InputToCount, 280, new Dictionary<string, object>() { { "class", "border border-primary px-3 py-2" } }, new Dictionary<string, object>() { { "class", "border border-secondary pb-2" } }, new Dictionary<string, object>() { { "class", "text-danger" } }, new Dictionary<string, object>() { { "style", "background-color: rgb(253, 155, 176); " } });
     <button type="submit">送信</button>
 }
